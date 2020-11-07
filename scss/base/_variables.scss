@@ -1,0 +1,120 @@
+/* переменные и миксины */
+$min-width: 320px;
+$max-width: 1100px;
+$base-bg: #fff;
+$base-font-size: 14px;
+$base-line-height: 1.5;
+$font1: OpenSans, sans-serif;
+$font2: OpenSans, sans-serif;
+$custom2: Montserrat, sans-serif;
+$link: #8cca11;
+$link-hover: #7cb30e;
+$border: #bfbfbf;
+
+/* main variables */
+
+//text, titles
+$text: #231f20;
+$title: #231f20;
+$textlight: #6e6e6e;
+$light: #eff4ff;
+$white: #f8faff;
+$aqua: #01b2b8;
+$bluelight: #4971d0;
+$orange: #ff9c00;
+$blue: #253c77;
+$red: #cd4649;
+$green: #8cca11;
+$yellow: yellow;
+$pink: #fff2ed;
+$gray: #b0b8cc;
+
+$fs52: 3.25em;
+$fs50: 3.125em;
+$fs48: 3rem;
+$fs47: 2.9375rem;
+$fs46: 2.2.875rem;
+$fs45: 2.8125rem;
+$fs44: 2.75rem;
+$fs43: 2.6875rem;
+$fs42: 2.625rem;
+$fs41: 2.5625rem;
+$fs40: 2.5rem;
+$fs39: 2.4375rem;
+$fs38: 2.375rem;
+$fs37: 2.3125rem;
+$fs36: 2.25rem;
+$fs35: 2.1875rem;
+$fs34: 2.125rem;
+$fs33: 2.0625rem;
+$fs32: 2rem;
+$fs31: 1.9375rem;
+$fs30: 1.875rem;
+$fs29: 1.8125rem;
+$fs28: 1.75rem;
+$fs27: 1.6875rem;
+$fs26: 1.625rem;
+$fs25: 1.5625rem;
+$fs24: 1.5rem;
+$fs23: 1.4375rem;
+$fs22: 1.375rem;
+$fs21: 1.3125rem;
+$fs20: 1.25rem;
+$fs19: 1.1875rem;
+$fs18: 1.125rem;
+$fs17: 1.0625rem;
+$fs16: 1rem;
+$fs15: 0.9375rem;
+$fs14: 0.875rem;
+$fs13: 0.8125rem;
+$fs12: 0.75rem;
+$fs11: 0.6875rem;
+
+@mixin line-clamp($numLines: 5, $lineHeight: 1.3) {
+	overflow: hidden;
+	text-overflow: -o-ellipsis-lastline;
+	text-overflow: ellipsis;
+	display: block;
+	/* autoprefixer: off */
+	display: -webkit-box;
+	-webkit-line-clamp: $numLines;
+	-webkit-box-orient: vertical;
+	max-height: $numLines * $lineHeight + unquote("em");
+	// вставлять как-то так: @include line-clamp(6); 6 - 6 строк
+}
+
+@mixin placeholder {
+	&.placeholder {
+		@content;
+	}
+
+	&:-moz-placeholder {
+		@content;
+	}
+
+	&::-moz-placeholder {
+		@content;
+	}
+
+	&:-ms-input-placeholder {
+		@content;
+	}
+
+	&::-webkit-input-placeholder {
+		@content;
+	}
+}
+
+@mixin text-decoration {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 0%;
+	content: ".";
+	color: transparent;
+	background: #989b9d;
+	height: 1px;
+	transition: all 0.4s;
+}

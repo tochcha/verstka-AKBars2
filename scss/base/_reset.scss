@@ -1,0 +1,346 @@
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	outline: none !important;
+    -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); // или rgba(0,0,0,0), помню, был глюк с цветом в каких-то версиях браузера
+    -webkit-tap-highlight-color: transparent;
+}
+*:before,
+*:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+input[type="search"] {
+   -webkit-appearance: none;
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+ul {
+	margin-top: 0;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+main {
+	display: block;
+}
+blockquote,
+q {
+	quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-width: 0px;
+	padding: 0px;
+	margin: 0px;
+}
+td {
+	margin: 0px;
+	padding: 0px;
+}
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+a:visited,
+a {
+	color: $link;
+	text-decoration: underline;
+	-webkit-appearance: none;
+	outline: none !important;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	&:active,
+	&:focus {
+		outline: none;
+	}
+	&:focus {
+		text-decoration: none;
+	}
+	&:hover {
+		color: $link-hover;
+	}
+}
+a:active {
+	background-color: transparent;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+textarea,
+input[type=url],
+input[type=search],
+input[type=number],
+input[type=password],
+input[type=tel],
+input[type=text],
+input[type=email] {
+	border: 1px solid $border;
+	background-color: #fff;
+	margin: 0;
+	font: 20px/28px $font1;
+	color: $text;
+	padding: 10px 15px;
+	vertical-align: middle;
+	display: inline-block;
+	outline: none !important;
+	max-width: 100%;
+	@include placeholder {
+		opacity: 0.7;
+	}
+}
+textarea {
+	overflow: auto;
+    resize: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+@keyframes pulsemy {
+	from {
+		box-shadow: transparentize(#000, .9) 0 0 4px 0, transparentize(#000, 1) 0 0 8px 35px;
+	}
+	to {
+		box-shadow: transparentize(#000, 1) 0 0 8px 50px, transparentize(#000, .9) 0 0 4px 0;
+	}
+}
+@keyframes pulsemy-hover {
+	from {
+		box-shadow: transparentize(#000, .8) 0 0 4px 0, transparentize(#000, 1) 0 0 8px 35px;
+	}
+	to {
+		box-shadow: transparentize(#000, 1) 0 0 8px 80px, transparentize(#000, .9) 0 0 4px 0;
+	}
+}
+@keyframes pulsemy-none {
+	from {
+		box-shadow: transparentize(#000, .8) 0 0 0 0, transparentize(#000, 1) 0 0 0 0;
+	}
+	to {
+		box-shadow: transparentize(#000, 1) 0 0 0 0, transparentize(#000, .9) 0 0 0 0;
+	}
+}
+img {
+	border-style: none;
+	height: auto;
+	max-width: 100%;
+}
+hr {
+	background-color: $border;
+	border: none;
+	height: 1px;
+}
+
+// фон автозаполненных полей
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 0 white inset !important;
+    box-shadow: 0 0 0 0 white inset !important;
+}
+// цвет автозаполнения
+input:-webkit-autofill {
+    -webkit-text-fill-color: #bdbdbd !important;
+}
+::-webkit-input-placeholder {
+	opacity: 1;
+}
+:-ms-input-placeholder {
+	opacity: 1;
+}
+::-moz-placeholder {
+	opacity: 1;
+}
+:focus::-webkit-input-placeholder {
+	color: transparent !important;
+}
+:focus:-ms-input-placeholder {
+	color: transparent !important;
+}
+:focus::-moz-placeholder {
+	color: transparent !important;
+}
+textarea:invalid,
+input:invalid {
+	box-shadow: none;
+}
+/* body input:focus:required:invalid,
+body textarea:focus:required:invalid {
+	color: red;
+}
+body input:required:valid,
+body textarea:required:valid {
+	color: green;
+} */
+.button,
+a.button {
+	-webkit-appearance: none;
+	outline: none !important;
+	border: none;
+	transition: .2s;
+	vertical-align: middle;
+	display: inline-block;
+	cursor: pointer;
+	text-decoration: none;
+	text-align: center;
+	background: linear-gradient(180deg, #A4D54A 0%, #8EC035 100%);
+	color: #fff;
+	margin: 0;
+	padding: 15px 3vw;
+	font: 600 18px/26px $font1;
+	max-width: 100%;
+	&:hover {
+		background: linear-gradient(180deg, #8EC035 0%, #A4D54A 100%);
+		color: #fff;
+		text-decoration: none;
+		border-color: $link-hover;
+	}
+	&_shadow {
+		box-shadow: 0 0 15px 0 rgba(100%, 0%, 26%, .9);
+	}
+	&_rounded {
+		border-radius: 75px;
+	}
+	&_small_45 {
+		padding: 10px 1.5vw;
+		font: 700 16px/21px $font1;
+	}
+	&_small_35 {
+		padding: 5px 1.5vw;
+		font: 700 14px/21px $font1;
+	}
+	&_alter {
+		background: none;
+		color: $text;
+		&:hover {
+			background: none;
+			color: $text;
+			box-shadow: 0 0 15px 0 rgba(100%, 0%, 26%, .5);
+		}
+	}
+}
+.hidden {
+	display: none;
+}
+.alignleft {
+	float: left;
+	margin: 0 11px 3px 0;
+}
+.alignright {
+	float: right;
+	margin: 0 0 3px 11px;
+}
+.aligncenter {
+	display: block;
+	margin: 0 auto;
+}
+.text-left {
+	text-align: left !important
+}
+.text-center {
+	text-align: center !important
+}
+.text-right {
+	text-align: right !important
+}
+.nowrap {
+	white-space: nowrap !important;
+}

@@ -1,0 +1,84 @@
+// for retina
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+only screen and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min-device-pixel-ratio: 1.5) {
+    .retina {
+        background-image: url(example@2x.png);
+    }
+}
+/* Портретная ориентация шаблона */
+@media screen and (orientation:portrait) {
+    .cloud-zoom-wrapper img.cloudzoom {
+        height: auto;
+        display: inline;
+    }
+}
+// для ИЕ 11 и ниже развилка
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .consultbox__content {
+    display: block;
+    padding-top: 42px;
+  }
+}
+
+@media only screen and (max-width : 1399px) {
+    body {
+        font-size: 20px;
+    }
+    .h1,
+    h1 {
+        font-size: 42px;
+    }
+    .h2,
+    h2 {
+        font-size: 32px;
+    }
+    .h3,
+    h3 {
+        font-size: 24px;
+    }
+}
+
+@media only screen and (max-width : 991px) {
+    body {
+        font-size: 18px;
+    }
+    .h1,
+    h1 {
+        font-size: 38px;
+        padding-bottom: 35px;
+    }
+    .h2,
+    h2 {
+        font-size: 30px;
+        padding-bottom: 25px;
+    }
+    .h3,
+    h3 {
+        font-size: 26px;
+        padding-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width : 575px) {
+    body {
+        font-size: 16px;
+    }
+    .h1,
+    h1 {
+        font-size: 32px;
+    }
+    .h2,
+    h2 {
+        font-size: 28px;
+    }
+    .h3,
+    h3 {
+        font-size: 24px;
+    }
+    .wrapper {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
