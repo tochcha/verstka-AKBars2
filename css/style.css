@@ -1525,6 +1525,8 @@ body .mm-opening .header {
 
 .visual__button .button {
   width: 434px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .visual__button .button strong {
