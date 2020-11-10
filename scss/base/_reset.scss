@@ -275,29 +275,42 @@ a.button {
 	-webkit-appearance: none;
 	outline: none !important;
 	border: none;
+	border-radius: 30px;
 	transition: .2s;
 	vertical-align: middle;
 	display: inline-block;
 	cursor: pointer;
 	text-decoration: none;
 	text-align: center;
-	background: linear-gradient(180deg, #A4D54A 0%, #8EC035 100%);
-	color: #fff;
+	background: $orange;
+	color: #000;
 	margin: 0;
 	padding: 15px 3vw;
-	font: 600 18px/26px $font1;
+	font: 600 18px/30px $font1;
 	max-width: 100%;
+	transition: all .2s ease-out 0s;
 	&:hover {
-		background: linear-gradient(180deg, #8EC035 0%, #A4D54A 100%);
-		color: #fff;
+		color: #000;
 		text-decoration: none;
 		border-color: $link-hover;
+		background: $orangeLight;
+		
 	}
 	&_shadow {
 		box-shadow: 0 0 15px 0 rgba(100%, 0%, 26%, .9);
 	}
-	&_rounded {
-		border-radius: 75px;
+	&--not_rounded {
+		border-radius: 0;
+	}
+	&--inverce {
+		background: none;
+		border: 1px solid $blue;
+		line-height: 28px;
+		color: $blue;
+		&:hover {
+			color: #fff;
+			background-color: $blue;
+		}
 	}
 	&_small_45 {
 		padding: 10px 1.5vw;

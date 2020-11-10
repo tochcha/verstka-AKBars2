@@ -97,6 +97,7 @@ $('.uni-overlay').click(function () {
 $(function () {
 	$(".telmask").mask("+7(999) 999-99-99");
 	$(".inp_time").mask("99:99 — 99:99");
+	$(".input_inn").mask("9999999999?99");
 });
 
 $(function () {
@@ -145,8 +146,8 @@ $(function () {
 		var $error_fio = $(".error_fio");
 		$error_fio.text("");
 
-		var per_name =/^[а-яё\s-]+$/i;		
-		if(!per_name.test(fio)){
+		var per_name = /^[а-яё\s-]+$/i;
+		if (!per_name.test(fio)) {
 			$error_fio.fadeIn();
 			$(".fio").addClass('inputtext--error');
 			$error_fio.text('Введите корректное имя на русском языке');
@@ -161,9 +162,9 @@ $(function () {
 				$error_fio.text('Слишком короткое имя');
 			}
 		}
-		
+
 		// валидация суммы
-		var input_sum = $(".input_sum").val();
+		/* var input_sum = $(".input_sum").val();
 		var input_sumLength = input_sum.length;
 		var $error_sum = $(".error_sum");
 		$error_sum.text("");
@@ -175,8 +176,23 @@ $(function () {
 			$error_sum.fadeIn();
 			$(".input_sum").addClass('inputtext--error');
 			$error_sum.text('Слишком маленькая сумма');
+		} */
+
+		// валидация ИНН
+		var input_inn = $(".input_inn").val();
+		console.log(input_inn);
+
+		var input_innLength = input_inn.length;
+		var $error_inn = $(".error_inn");
+		if (input_innLength > 0) {
+			$error_inn.fadeOut();
+			$(".input_inn").removeClass('inputtext--error');
+		} else {
+			$error_inn.fadeIn();
+			$(".input_inn").addClass('inputtext--error');
+			$error_inn.text('ИНН должен быть 10-12 цифр');
 		}
-		
+
 		// валидация телефонов
 		var input_tel = $(".input_tel").val();
 		var input_telLength = input_tel.length;
@@ -189,7 +205,7 @@ $(function () {
 			$(".input_tel").addClass('inputtext--error');
 			$error_tel.text('Номер телефона заполнен неверно');
 		}
-		
+
 		var input_tel2 = $(".input_tel2").val();
 		var input_telLength2 = input_tel2.length;
 		var $error_tel2 = $(".error_tel2");
@@ -201,7 +217,29 @@ $(function () {
 			$(".input_tel2").addClass('inputtext--error');
 			$error_tel2.text('Номер телефона заполнен неверно');
 		}
-		
+
 		return false;
 	}
 });
+
+// ползунок
+$(".polzunok").slider({
+	animate: true,
+	range: "min",
+	value: 10000000,
+	min: 5000000,
+	max: 65000000,
+	step: 1000000,
+	slide: function (event, ui) {
+		$("#slider-input").val(ui.value);
+		var $test = $("#slider-input");
+		var val = $test.prop("value");
+		$test.prop("value", prettify(val));
+	}
+});
+// пробелы в инпут между тысячами
+function prettify(num) {
+	var n = num.toString();
+	var separator = " ";
+	return n.replace(/(\d{1,3}(?=(?:\d\d\d)+(?!\d)))/g, "$1" + separator);
+}
