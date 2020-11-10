@@ -591,7 +591,7 @@ body .mm-opening .header {
 	width: 100%;
 	order: 2;
 	flex: 1;
-	padding-top: 120px;
+	padding-top: 104px;
 }
 @media only screen and (max-width: 991px) {
 	.header {
@@ -599,9 +599,10 @@ body .mm-opening .header {
 	}
 	.logo {
 		padding-right: 0;
+		padding-top: 15px;
 	}
 	.content {
-		padding-top: 82px;
+		padding-top: 71px;
 	}
 }
 @media only screen and (max-width: 767px) {
@@ -609,9 +610,6 @@ body .mm-opening .header {
 		width: 198px;
 		flex: none;
 		margin-left: -10px;
-	}
-	.content {
-		padding-top: 72px;
 	}
 }
 .visual {
@@ -700,6 +698,14 @@ body .mm-opening .header {
 		position: absolute;
 		left: 0;
 		top: 0;
+	}
+}
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+	.at {
+		padding-right: 12px;
+	}
+	.header__center {
+		padding-right: 5px;
 	}
 }
 @media only screen and (max-width: 991px) {
