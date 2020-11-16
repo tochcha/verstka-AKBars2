@@ -658,11 +658,16 @@ body .mm-opening .header {
 	}
 }
 .visual_p {
-	font-weight: 600;
+	font-weight: 400;
 	font-size: 18px;
 	padding-bottom: 132px;
 	@media only screen and (max-width: 1199px) {
 		font-size: calc((100vw - 320px) / (1200 - 320) * (18 - 16) + 16px);
+	}
+	@media only screen and (max-width : 767px) {
+		br {
+			display: none;
+		}
 	}
 }
 .visual__button {
