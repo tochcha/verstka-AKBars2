@@ -109,7 +109,7 @@
 							<div class="specification__item">
 								<div class="specification__img"><img src="img/icons/individual.svg" alt=""></div>
 								<div class="specification__text">
-									<div class="specification__title">Подходим к клиентам</span></div>
+									<div class="specification__title">Подходим к клиентам</div>
 									<div class="specification__bold">индивидуально</div>
 								</div>
 							</div>
@@ -199,7 +199,7 @@
 									</li>
 								</ul>
 								<div class="interest__buttons">
-									<span data-modal-button="modal-1" href="#" class="button">Получить</span>
+									<span data-modal-button="modal-1" class="button">Получить</span>
 									<a href="#" class="button button--inverce">Узнать подробнее</a>
 								</div>
 							</div>
@@ -222,7 +222,7 @@
 						</div>
 						<div class="loadbox__text">
 							<div class="loadbox__title">Требования к объекту и заёмщику. Презентация о компании SimpleFinance.</div>
-							<div class="loadbox__link"><a href="#">Скачать <span>PDF</span></a></div>
+							<div class="loadbox__link"><a href="https://simplefinance.ru/zalogi-leasing/SimpleFinance.pdf" traget="_blank">Скачать <span>PDF</span></a></div>
 						</div>
 					</div>
 				</div> -->
@@ -274,7 +274,9 @@
 							<p>ИНН 7703381419</p>
 							<p>ОГРН 1157746499547</p>
 							<p>Свидетельство ЦБ РФ о внесении в реестр <br>МКК № 001503045007061 от 23.10.2015 г.</p>
-							<p><span data-modal-button="modal-2" style="color: red; text-decoration: underline; cursor: pointer;">Демо попап-окна успешной отправки заявки</span></p>
+							<p><span data-modal-button="modal-2"
+									style="color: red; text-decoration: underline; cursor: pointer;">Демо попап-окна
+									успешной отправки заявки</span></p>
 						</div>
 						<div class="footer__bottom_right">
 							<p>115191, г. Москва, Холодильный переулок, 3 корп. 1, cтр. 6</p>
@@ -289,8 +291,7 @@
 						<form action="#">
 							<div class="form__item">
 								<label class="form__item_title">Номер телефона</label>
-								<input class="inputtext telmask input_tel2" type="text"
-									placeholder="+7 (___) ___-__-__">
+								<input class="telmask input_tel2" type="text" placeholder="+7 (___) ___-__-__">
 								<div class="form__error error_tel2"></div>
 							</div>
 							<div class="form__item form__item--flex">
@@ -310,8 +311,27 @@
 							</div>
 							<div class="form__item form__item--toggle form__item--hidden">
 								<label class="form__item_title">Время звонка</label>
-								<input class="inputtext inp_time" type="text" placeholder="10:00 — 11:00">
-								<div class="form__error">Время заполнено неверно</div>
+								<!-- <input class="inp_time" type="text" placeholder="10:00 — 11:00"> -->
+								<select class="styled">
+									<option>09:00 — 09:30</option>
+									<option>09:30 — 10:00</option>
+									<option>10:00 — 10:30</option>
+									<option>10:30 — 11:00</option>
+									<option>11:00 — 11:30</option>
+									<option>11:30 — 12:00</option>
+									<option>12:00 — 12:30</option>
+									<option>10:00 — 10:30</option>
+									<option>10:30 — 11:00</option>
+									<option>11:00 — 11:30</option>
+									<option>11:30 — 12:00</option>
+									<option>12:00 — 12:30</option>
+									<option>12:30 - 13:00</option>
+									<option>13:00 - 13:30</option>
+									<option>13:30 - 14:00</option>
+									<option>14:00 - 14:30</option>
+									<option>14:30 - 15:00</option>
+								</select>
+								<!-- <div class="form__error">Время заполнено неверно</div> -->
 							</div>
 							<div class="form__item">
 								<div class="form__rem form__item--last">Оставляя заявку вы соглашаетесь с <a
@@ -320,8 +340,9 @@
 										данных</a></div>
 							</div>
 							<div class="form__item form__item--last">
-								<div class="form__button"><button type="submit"
-										class="button btn_submit btn-submit">Отправить</button></div>
+								<div class="form__button">
+									<button type="submit" class="button btn_submit btn-submit">Отправить</button>
+								</div>
 							</div>
 						</form>
 					</div>
@@ -346,6 +367,7 @@
 	<script src="js/components/jquery-ui.js"></script>
 	<script src="js/components/jquery.ui.touch-punch.min.js"></script>
 	<script src="js/components/jquery.maskedinput.min.js"></script>
+	<script src="js/components/jquery.formstyler.js"></script>
 	<script src="js/custom.js"></script>
 </body>
 

@@ -153,7 +153,7 @@ td {
 
 a:visited,
 a {
-  color: #0B30F0;
+  color: #0b30f0;
   text-decoration: underline;
   -webkit-appearance: none;
   outline: none !important;
@@ -173,7 +173,7 @@ a:focus {
 
 a:visited:hover,
 a:hover {
-  color: #0B30F0;
+  color: #0b30f0;
 }
 
 a:active {
@@ -195,7 +195,8 @@ input[type=password],
 input[type=tel],
 input[type=text],
 input[type=email] {
-  border: 1px solid #bfbfbf;
+  border: 1px solid #dedede;
+  border-radius: 7px;
   background-color: #fff;
   margin: 0;
   font: 20px/28px OpenSans, sans-serif;
@@ -342,7 +343,7 @@ img {
 }
 
 hr {
-  background-color: #bfbfbf;
+  background-color: #dedede;
   border: none;
   height: 1px;
 }
@@ -424,8 +425,8 @@ a.button {
 a.button:hover {
   color: #000;
   text-decoration: none;
-  border-color: #0B30F0;
-  background: #fcad1b;
+  border-color: #0b30f0;
+  background: #ffb42e;
 }
 
 .button_shadow,
@@ -442,15 +443,15 @@ a.button--not_rounded {
 .button--inverce,
 a.button--inverce {
   background: none;
-  border: 1px solid #06379B;
+  border: 1px solid #06379b;
   line-height: 28px;
-  color: #06379B;
+  color: #06379b;
 }
 
 .button--inverce:hover,
 a.button--inverce:hover {
   color: #fff;
-  background-color: #06379B;
+  background-color: #06379b;
 }
 
 .button_small_45,
@@ -935,52 +936,60 @@ body .mm-opening .header {
   width: 100%;
 }
 
+.jq-selectbox.opened .jq-selectbox__select {
+  background-color: #fbfbfb;
+}
+
 .jq-selectbox__select {
   width: 100%;
-  background: #fff url("../img/arrow-down-select.svg") no-repeat right 8px top 50%;
+  /* background: #fff url("../img/arrow-down-select.svg") no-repeat right 8px top 50%; */
+  background: #fff;
   cursor: pointer;
-  color: #888;
-  border: 1px solid #ddd;
+  border: 1px solid #dedede;
+  border-radius: 7px;
 }
 
 .jq-selectbox__select-text {
   width: calc(100% - 44px) !important;
-  font: 13px/40px "ProximaNova", sans-serif;
-  height: 40px;
-  padding: 0 0 0 15px;
+  font: 20px/28px OpenSans, sans-serif;
+  padding: 10px 15px;
+  color: #231f20;
 }
 
 .jq-selectbox__dropdown {
   width: 100%;
   background-color: #fff;
-  border: 1px solid #ddd;
+  border: 1px solid #dedede;
   padding: 2px 0;
-  margin-top: -1px;
+  margin-top: -18px;
+  margin-bottom: -18px;
+  border-radius: 7px;
 }
 
 .jq-selectbox__dropdown ul {
   margin: 0;
   padding: 0;
+  max-height: 188px;
 }
 
 .jq-selectbox__dropdown ul li {
   list-style: none;
   padding: 0 15px;
-  color: #888;
+  color: #6e6e6e;
   -webkit-transition: 0.2s;
   transition: 0.2s;
   cursor: pointer;
-  font: 13px/30px OpenSans, sans-serif;
+  font: 18px/46px OpenSans, Helvetica, Arial, sans-serif;
 }
 
 .jq-selectbox__dropdown ul li:hover {
-  background-color: #888;
-  color: #fff;
+  background-color: #F0F6FE;
+  color: #6E6E6E;
 }
 
 .jq-selectbox__dropdown ul li.selected {
-  background-color: #ccc;
-  color: #fff;
+  background-color: #F0F6FE;
+  color: #6E6E6E;
 }
 
 .jq-selectbox__dropdown ul li.disabled {
@@ -1085,7 +1094,7 @@ body .mm-opening .header {
     color: #231f20;
   }
   .r-tabs .r-tabs-accordion-title.r-tabs-state-active .r-tabs-anchor {
-    background-color: #0B30F0;
+    background-color: #0b30f0;
     color: #fff;
   }
   /* Disabled accordion button */
@@ -1194,7 +1203,7 @@ body .mm-opening .header {
 }
 
 .tochcha_tabs__selectors_item:hover, .tochcha_tabs__selectors_item.active {
-  color: #0B30F0;
+  color: #0b30f0;
 }
 
 .tochcha_tabs__tab {
@@ -1831,9 +1840,39 @@ input.inputtext {
   background-color: #eff4ff;
 }
 
+input.inputtext:focus, input.inputtext:hover {
+  background-color: #fbfbfb;
+}
+
 input.inputtext--error {
   background-color: #fff2ed;
-  border-color: #fff2ed;
+  border-color: #ed4e2c;
+  color: #ed4e2c;
+}
+
+input.inputtext--error.placeholder {
+  color: #ed4e2c;
+  opacity: 1;
+}
+
+input.inputtext--error:-moz-placeholder {
+  color: #ed4e2c;
+  opacity: 1;
+}
+
+input.inputtext--error::-moz-placeholder {
+  color: #ed4e2c;
+  opacity: 1;
+}
+
+input.inputtext--error:-ms-input-placeholder {
+  color: #ed4e2c;
+  opacity: 1;
+}
+
+input.inputtext--error::-webkit-input-placeholder {
+  color: #ed4e2c;
+  opacity: 1;
 }
 
 .form__error {
@@ -2228,7 +2267,7 @@ input.inputtext--error {
   display: inline-block;
   position: relative;
   padding-right: 44px;
-  color: #06379B;
+  color: #06379b;
   font-size: 18px;
   line-height: 26px;
   cursor: pointer;
@@ -2292,6 +2331,17 @@ input.inputtext--error {
   .success .modal_box__title {
     text-align: left;
   }
+}
+
+.form_callback .form__item textarea,
+.form_callback .form__item input[type=url],
+.form_callback .form__item input[type=search],
+.form_callback .form__item input[type=number],
+.form_callback .form__item input[type=password],
+.form_callback .form__item input[type=tel],
+.form_callback .form__item input[type=text],
+.form_callback .form__item input[type=email] {
+  width: 100%;
 }
 
 @media only screen and (max-width: 767px) {
@@ -2374,7 +2424,7 @@ input.inputtext--error {
 }
 
 .ui-widget-header {
-  background: #06379B;
+  background: #06379b;
   height: 3px;
   left: 1px;
   top: 1px;
@@ -2392,7 +2442,7 @@ input.inputtext--error {
   display: block;
   width: 11px;
   height: 11px;
-  background-color: #06379B;
+  background-color: #06379b;
   border-radius: 50%;
   position: absolute;
   left: 5px;
@@ -2567,7 +2617,7 @@ input.inputtext--error {
   -webkit-box-ordinal-group: 10;
       -ms-flex-order: 9;
           order: 9;
-  color: #6E6E6E;
+  color: #6e6e6e;
 }
 
 .footer__top {
@@ -2622,8 +2672,8 @@ input.inputtext--error {
 }
 
 .social__item img {
-  -webkit-transition: all .2s ease-out 0s;
-  transition: all .2s ease-out 0s;
+  -webkit-transition: all 0.2s ease-out 0s;
+  transition: all 0.2s ease-out 0s;
   display: block;
   width: 100%;
   height: 100%;
@@ -2642,7 +2692,7 @@ input.inputtext--error {
 }
 
 .phonebox--footer a {
-  color: #6E6E6E;
+  color: #6e6e6e;
 }
 
 .phonebox--footer .phonebox__link {
@@ -2670,8 +2720,8 @@ input.inputtext--error {
 
 @media only screen and (max-width: 1199px) {
   .footer {
-    padding-top: calc( (100vw - 320px)/(1200 - 320) * (55 - 25) + 25px);
-    padding-bottom: calc( (100vw - 320px)/(1200 - 320) * (90 - 25) + 25px);
+    padding-top: calc((100vw - 320px) / (1200 - 320) * (55 - 25) + 25px);
+    padding-bottom: calc((100vw - 320px) / (1200 - 320) * (90 - 25) + 25px);
   }
 }
 
