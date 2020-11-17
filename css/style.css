@@ -199,7 +199,7 @@ input[type=email] {
   border-radius: 7px;
   background-color: #fff;
   margin: 0;
-  font: 20px/28px OpenSans, sans-serif;
+  font: 18px/28px OpenSans, sans-serif;
   color: #231f20;
   padding: 10px 15px;
   vertical-align: middle;
@@ -216,7 +216,7 @@ input[type=password].placeholder,
 input[type=tel].placeholder,
 input[type=text].placeholder,
 input[type=email].placeholder {
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 textarea:-moz-placeholder,
@@ -227,7 +227,7 @@ input[type=password]:-moz-placeholder,
 input[type=tel]:-moz-placeholder,
 input[type=text]:-moz-placeholder,
 input[type=email]:-moz-placeholder {
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 textarea::-moz-placeholder,
@@ -238,7 +238,7 @@ input[type=password]::-moz-placeholder,
 input[type=tel]::-moz-placeholder,
 input[type=text]::-moz-placeholder,
 input[type=email]::-moz-placeholder {
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 textarea:-ms-input-placeholder,
@@ -249,7 +249,7 @@ input[type=password]:-ms-input-placeholder,
 input[type=tel]:-ms-input-placeholder,
 input[type=text]:-ms-input-placeholder,
 input[type=email]:-ms-input-placeholder {
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 textarea::-webkit-input-placeholder,
@@ -260,7 +260,7 @@ input[type=password]::-webkit-input-placeholder,
 input[type=tel]::-webkit-input-placeholder,
 input[type=text]::-webkit-input-placeholder,
 input[type=email]::-webkit-input-placeholder {
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 textarea:focus, textarea:hover,
