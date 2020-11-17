@@ -770,7 +770,7 @@ body .mm-opening .header {
 	}
 }
 .specification__title {
-	font-size: 18px;
+	font-size: 15px;
 	line-height: 1.7;
 }
 .specification__bold {
@@ -780,7 +780,7 @@ body .mm-opening .header {
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
 	.specification__title {
-		font-size: 15px;
+		font-size: 14px;
 	}
 	.specification__bold {
 		font-size: 22px;
@@ -1464,13 +1464,15 @@ input.inputtext {
 }
 .interest__buttons {
 	.button {
-		padding-left: 64px;
-		padding-right: 64px;
+		padding-left: 20px;
+		padding-right: 20px;
 		margin-right: 41px;
 		margin-bottom: 15px;
-		@media only screen and (max-width: 1199px) {
+		width: 220px;
+		@media only screen and (max-width: 991px) {
 			padding-left: 8vw;
 			padding-right: 8vw;
+			width: auto;
 		}
 		@media only screen and (max-width: 479px) {
 			padding-left: 0;
@@ -1485,6 +1487,19 @@ input.inputtext {
 					border-color: $orangeLight;
 				}
 			} */
+		}
+		@media only screen and (min-width: 992px) {
+			&--inverce {
+				margin-right: 0;
+				width: 220px;
+				padding-left: 20px;
+				padding-right: 20px;
+			}
+		}
+		@media only screen and (min-width: 1200px) {
+			&--inverce {
+				width: 250px;
+			}
 		}
 	}
 }
@@ -1506,15 +1521,18 @@ input.inputtext {
 @media only screen and (max-width: 1199px) {
 	.interest__h2 {
 		padding-bottom: calc((100vw - 320px) / (1200 - 320) * (88 - 23) + 23px);
-		font-size: calc((100vw - 320px) / (1200 - 320) * (36 - 24) + 24px);
+		font-size: calc((100vw - 320px) / (1200 - 320) * (36 - 18) + 18px);
 	}
 	.interest__title {
-		font-size: calc((100vw - 320px) / (1200 - 320) * (24 - 20) + 20px);
+		font-size: calc((100vw - 320px) / (1200 - 320) * (24 - 18) + 18px);
 	}
 }
 @media only screen and (max-width: 991px) {
 	.interest__box {
-		display: block;
+		flex-direction: column;
+	}
+	.interest__content {
+		order: 2;
 	}
 	.interest__img {
 		padding-bottom: 67%;
@@ -1529,6 +1547,26 @@ input.inputtext {
 @media only screen and (max-width: 374px) {
 	.interest__box {
 		border-radius: 5px;
+	}
+}
+@media only screen and (min-width : 480px) {
+	.interest__icon {
+		display: none;
+	}
+}
+@media only screen and (max-width : 479px) {
+	.interest__list {
+		display: block;
+	}
+	.interest__item {
+		width: 100%;
+		position: relative;
+		padding: 5px 0 35px 73px;
+	}
+	.interest__icon {
+		position: absolute;
+		left: 0;
+		top: 0;
 	}
 }
 .footer {

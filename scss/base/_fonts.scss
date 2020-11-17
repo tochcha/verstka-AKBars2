@@ -65,6 +65,18 @@ bolder - Изменяет начертание относительно насы
 	font-style: normal;
 }
 
+@font-face {
+	font-display: swap;
+	font-family: "Montserrat";
+	src: url("../fonts/ofont_ru_Montserrat.eot");
+	src: url("../fonts/ofont_ru_Montserrat.eot") format("embedded-opentype"),
+		url("../fonts/ofont_ru_Montserrat.woff2") format("woff2"),
+		url("../fonts/ofont_ru_Montserrat.woff") format("woff"),
+		url("../fonts/ofont_ru_Montserrat.ttf") format("truetype"),
+		url("../fonts/ofont_ru_Montserrat.svg#ofont_ru_Montserrat") format("svg");
+	font-weight: 700;
+	font-style: normal;
+}
 
 @font-face {
     font-display: swap;

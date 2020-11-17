@@ -263,6 +263,110 @@ input[type=email]::-webkit-input-placeholder {
   opacity: 0.7;
 }
 
+textarea:focus, textarea:hover,
+input[type=url]:focus,
+input[type=url]:hover,
+input[type=search]:focus,
+input[type=search]:hover,
+input[type=number]:focus,
+input[type=number]:hover,
+input[type=password]:focus,
+input[type=password]:hover,
+input[type=tel]:focus,
+input[type=tel]:hover,
+input[type=text]:focus,
+input[type=text]:hover,
+input[type=email]:focus,
+input[type=email]:hover {
+  background-color: #fbfbfb;
+}
+
+textarea--error,
+input[type=url]--error,
+input[type=search]--error,
+input[type=number]--error,
+input[type=password]--error,
+input[type=tel]--error,
+input[type=text]--error,
+input[type=email]--error {
+  background-color: #fff2ed;
+  border-color: #ed4e2c;
+  color: #ed4e2c;
+}
+
+textarea--error.placeholder,
+input[type=url]--error.placeholder,
+input[type=search]--error.placeholder,
+input[type=number]--error.placeholder,
+input[type=password]--error.placeholder,
+input[type=tel]--error.placeholder,
+input[type=text]--error.placeholder,
+input[type=email]--error.placeholder {
+  color: #ed4e2c;
+  opacity: 1;
+}
+
+textarea--error:-moz-placeholder,
+input[type=url]--error:-moz-placeholder,
+input[type=search]--error:-moz-placeholder,
+input[type=number]--error:-moz-placeholder,
+input[type=password]--error:-moz-placeholder,
+input[type=tel]--error:-moz-placeholder,
+input[type=text]--error:-moz-placeholder,
+input[type=email]--error:-moz-placeholder {
+  color: #ed4e2c;
+  opacity: 1;
+}
+
+textarea--error::-moz-placeholder,
+input[type=url]--error::-moz-placeholder,
+input[type=search]--error::-moz-placeholder,
+input[type=number]--error::-moz-placeholder,
+input[type=password]--error::-moz-placeholder,
+input[type=tel]--error::-moz-placeholder,
+input[type=text]--error::-moz-placeholder,
+input[type=email]--error::-moz-placeholder {
+  color: #ed4e2c;
+  opacity: 1;
+}
+
+textarea--error:-ms-input-placeholder,
+input[type=url]--error:-ms-input-placeholder,
+input[type=search]--error:-ms-input-placeholder,
+input[type=number]--error:-ms-input-placeholder,
+input[type=password]--error:-ms-input-placeholder,
+input[type=tel]--error:-ms-input-placeholder,
+input[type=text]--error:-ms-input-placeholder,
+input[type=email]--error:-ms-input-placeholder {
+  color: #ed4e2c;
+  opacity: 1;
+}
+
+textarea--error::-webkit-input-placeholder,
+input[type=url]--error::-webkit-input-placeholder,
+input[type=search]--error::-webkit-input-placeholder,
+input[type=number]--error::-webkit-input-placeholder,
+input[type=password]--error::-webkit-input-placeholder,
+input[type=tel]--error::-webkit-input-placeholder,
+input[type=text]--error::-webkit-input-placeholder,
+input[type=email]--error::-webkit-input-placeholder {
+  color: #ed4e2c;
+  opacity: 1;
+}
+
+textarea:focus,
+input[type=url]:focus,
+input[type=search]:focus,
+input[type=number]:focus,
+input[type=password]:focus,
+input[type=tel]:focus,
+input[type=text]:focus,
+input[type=email]:focus {
+  background-color: #fbfbfb;
+  border-color: #bebebe;
+  color: #231f20;
+}
+
 textarea {
   overflow: auto;
   resize: none;
@@ -569,6 +673,15 @@ bolder - Изменяет начертание относительно насы
   font-family: "Montserrat";
   src: url("../fonts/Montserrat-ExtraBold.eot");
   src: url("../fonts/Montserrat-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat-ExtraBold.woff") format("woff"), url("../fonts/Montserrat-ExtraBold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Montserrat";
+  src: url("../fonts/ofont_ru_Montserrat.eot");
+  src: url("../fonts/ofont_ru_Montserrat.eot") format("embedded-opentype"), url("../fonts/ofont_ru_Montserrat.woff2") format("woff2"), url("../fonts/ofont_ru_Montserrat.woff") format("woff"), url("../fonts/ofont_ru_Montserrat.ttf") format("truetype"), url("../fonts/ofont_ru_Montserrat.svg#ofont_ru_Montserrat") format("svg");
   font-weight: 700;
   font-style: normal;
 }
@@ -1662,7 +1775,7 @@ body .mm-opening .header {
 }
 
 .specification__title {
-  font-size: 18px;
+  font-size: 15px;
   line-height: 1.7;
 }
 
@@ -1674,7 +1787,7 @@ body .mm-opening .header {
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .specification__title {
-    font-size: 15px;
+    font-size: 14px;
   }
   .specification__bold {
     font-size: 22px;
@@ -2534,16 +2647,18 @@ input.inputtext--error::-webkit-input-placeholder {
 }
 
 .interest__buttons .button {
-  padding-left: 64px;
-  padding-right: 64px;
+  padding-left: 20px;
+  padding-right: 20px;
   margin-right: 41px;
   margin-bottom: 15px;
+  width: 220px;
 }
 
-@media only screen and (max-width: 1199px) {
+@media only screen and (max-width: 991px) {
   .interest__buttons .button {
     padding-left: 8vw;
     padding-right: 8vw;
+    width: auto;
   }
 }
 
@@ -2561,6 +2676,21 @@ input.inputtext--error::-webkit-input-placeholder {
 					border-color: $orangeLight;
 				}
 			} */
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .interest__buttons .button--inverce {
+    margin-right: 0;
+    width: 220px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .interest__buttons .button--inverce {
+    width: 250px;
   }
 }
 
@@ -2588,16 +2718,24 @@ input.inputtext--error::-webkit-input-placeholder {
 @media only screen and (max-width: 1199px) {
   .interest__h2 {
     padding-bottom: calc((100vw - 320px) / (1200 - 320) * (88 - 23) + 23px);
-    font-size: calc((100vw - 320px) / (1200 - 320) * (36 - 24) + 24px);
+    font-size: calc((100vw - 320px) / (1200 - 320) * (36 - 18) + 18px);
   }
   .interest__title {
-    font-size: calc((100vw - 320px) / (1200 - 320) * (24 - 20) + 20px);
+    font-size: calc((100vw - 320px) / (1200 - 320) * (24 - 18) + 18px);
   }
 }
 
 @media only screen and (max-width: 991px) {
   .interest__box {
-    display: block;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .interest__content {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
   }
   .interest__img {
     padding-bottom: 67%;
@@ -2614,6 +2752,28 @@ input.inputtext--error::-webkit-input-placeholder {
 @media only screen and (max-width: 374px) {
   .interest__box {
     border-radius: 5px;
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  .interest__icon {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .interest__list {
+    display: block;
+  }
+  .interest__item {
+    width: 100%;
+    position: relative;
+    padding: 5px 0 35px 73px;
+  }
+  .interest__icon {
+    position: absolute;
+    left: 0;
+    top: 0;
   }
 }
 
