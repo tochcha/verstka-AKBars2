@@ -54,3 +54,14 @@
   font-weight: 700;
   font-style: normal;
 }
+
+@font-face {
+	font-display: swap;
+	font-family: "OpenSans";
+	src: url("../fonts/OpenSans-ExtraBold.eot");
+	src: url("../fonts/OpenSans-ExtraBold.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/OpenSans-ExtraBold.woff") format("woff"),
+		url("../fonts/OpenSans-ExtraBold.ttf") format("truetype");
+	font-weight: 800;
+	font-style: normal;
+}

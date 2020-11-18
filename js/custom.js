@@ -67,7 +67,7 @@ $('.uni-overlay').click(function () {
 $(function () {
 	$(".telmask").mask("+7(999) 999-99-99");
 	$(".inp_time").mask("99:99 — 99:99");
-	$(".input_inn").mask("9999999999?99");
+	$(".input_inn").mask("9999999999?99", {placeholder: "." });
 });
 
 $(function () {

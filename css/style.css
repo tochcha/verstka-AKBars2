@@ -664,6 +664,15 @@ a.button_alter:hover {
   font-style: normal;
 }
 
+@font-face {
+  font-display: swap;
+  font-family: "OpenSans";
+  src: url("../fonts/OpenSans-ExtraBold.eot");
+  src: url("../fonts/OpenSans-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-ExtraBold.woff") format("woff"), url("../fonts/OpenSans-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
 .icon-ex {
   background: url(../img/icons/icon-ex.svg) no-repeat 0 0;
   width: 32px;
@@ -1839,6 +1848,17 @@ body .mm-opening .header {
   border-radius: 7px;
 }
 
+.blue_section--no_bg textarea:focus,
+.blue_section--no_bg input[type="url"]:focus,
+.blue_section--no_bg input[type="search"]:focus,
+.blue_section--no_bg input[type="number"]:focus,
+.blue_section--no_bg input[type="password"]:focus,
+.blue_section--no_bg input[type="tel"]:focus,
+.blue_section--no_bg input[type="text"]:focus,
+.blue_section--no_bg input[type="email"]:focus {
+  border-color: #fbfbfb;
+}
+
 .form {
   padding: 55px 55px 5px;
 }
@@ -2532,6 +2552,12 @@ input.inputtext--error::-webkit-input-placeholder {
   display: -ms-flexbox;
   display: flex;
   overflow: hidden;
+  -webkit-transition: all .2s ease-out 0s;
+  transition: all .2s ease-out 0s;
+}
+
+.interest__box:hover {
+  background-color: #eff4ff;
 }
 
 .interest__content {
@@ -2542,7 +2568,7 @@ input.inputtext--error::-webkit-input-placeholder {
 }
 
 .interest__h2 {
-  font: 900 36px/1.4 OpenSans, Helvetica, Arial, sans-serif;
+  font: 800 36px/1.4 OpenSans, Helvetica, Arial, sans-serif;
   padding-bottom: 88px;
 }
 
@@ -2595,15 +2621,6 @@ input.inputtext--error::-webkit-input-placeholder {
     padding-left: 0;
     padding-right: 0;
     width: 100%;
-    /* &--inverce {
-				background-color: $orange;
-				border-color: $orange;
-				color: #ffffff;
-				&:hover {
-					background-color: $orangeLight;
-					border-color: $orangeLight;
-				}
-			} */
   }
 }
 
@@ -2613,6 +2630,11 @@ input.inputtext--error::-webkit-input-placeholder {
     width: 220px;
     padding-left: 20px;
     padding-right: 20px;
+  }
+  .interest__buttons .button--inverce:hover {
+    background-color: #fff;
+    color: #06379b;
+    border-color: #fff;
   }
 }
 

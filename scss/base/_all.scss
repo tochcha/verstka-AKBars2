@@ -875,6 +875,9 @@ body .mm-opening .header {
 		input[type="email"] {
 			background-color: #fff;
 			border-radius: 7px;
+			&:focus {
+				border-color: #fbfbfb;
+			}
 		}
 	}
 }
@@ -1428,13 +1431,17 @@ input.inputtext {
 	border-radius: 10px;
 	display: flex;
 	overflow: hidden;
+	transition: all .2s ease-out 0s;
+	&:hover {
+		background-color: $light;
+	}
 }
 .interest__content {
 	padding: 55px 45px;
 	flex: 2;
 }
 .interest__h2 {
-	font: 900 36px/1.4 OpenSans, Helvetica, Arial, sans-serif;
+	font: 800 36px/1.4 OpenSans, Helvetica, Arial, sans-serif;
 	padding-bottom: 88px;
 }
 .interest__list {
@@ -1474,15 +1481,6 @@ input.inputtext {
 			padding-left: 0;
 			padding-right: 0;
 			width: 100%;
-			/* &--inverce {
-				background-color: $orange;
-				border-color: $orange;
-				color: #ffffff;
-				&:hover {
-					background-color: $orangeLight;
-					border-color: $orangeLight;
-				}
-			} */
 		}
 		@media only screen and (min-width: 992px) {
 			&--inverce {
@@ -1490,6 +1488,11 @@ input.inputtext {
 				width: 220px;
 				padding-left: 20px;
 				padding-right: 20px;
+				&:hover {
+					background-color: #fff;
+					color: $blue;
+					border-color: #fff;
+				}
 			}
 		}
 		@media only screen and (min-width: 1200px) {
