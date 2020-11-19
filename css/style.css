@@ -1010,7 +1010,8 @@ body .mm-opening .header {
   width: 100%;
   background-color: #fff;
   border: 1px solid #dedede;
-  padding: 2px 0;
+  padding: 0;
+  overflow: hidden;
   margin-top: -18px;
   margin-bottom: -18px;
   border-radius: 7px;
@@ -1019,7 +1020,7 @@ body .mm-opening .header {
 .jq-selectbox__dropdown ul {
   margin: 0;
   padding: 0;
-  max-height: 188px;
+  max-height: 184px;
 }
 
 .jq-selectbox__dropdown ul li {
